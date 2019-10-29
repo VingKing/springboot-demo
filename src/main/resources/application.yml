@@ -1,0 +1,41 @@
+## 读写分离配置
+spring:
+  shardingsphere:
+    datasource:
+      names: master,slave0
+      ## 主库
+      master:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://localhost:32778/plus_demo
+        username: root
+        password: mysql
+      ## 从库
+      slave0:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource
+        jdbc-url: jdbc:mysql://localhost:32778/plus_demo
+        username: root
+        password: mysql
+    masterslave:
+      load-balance-algorithm-type: round_robin
+      master-data-source-name: master
+      name: ms
+      slave-data-source-names: slave0
+    props:
+      sql:
+        show: true
+
+## 逻辑删除配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+jwt:
+  header: Authorization
+  claim: username
+  expiration: 60000
+  issuer: JWT
+  secret: 432d2eb**************20dba3633
