@@ -7,14 +7,14 @@ spring:
       master:
         driver-class-name: com.mysql.cj.jdbc.Driver
         type: com.zaxxer.hikari.HikariDataSource
-        jdbc-url: jdbc:mysql://localhost:32778/plus_demo
+        jdbc-url: jdbc:mysql://localhost:32768/plus_demo
         username: root
         password: mysql
       ## 从库
       slave0:
         driver-class-name: com.mysql.cj.jdbc.Driver
         type: com.zaxxer.hikari.HikariDataSource
-        jdbc-url: jdbc:mysql://localhost:32778/plus_demo
+        jdbc-url: jdbc:mysql://localhost:32769/plus_demo
         username: root
         password: mysql
     masterslave:

@@ -13,11 +13,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Package Name : com.sunlands.feo.utils
- * @Description : Token相关工具类
- * @Author : ZhangBin
- * @Create Date : 2019/3/18
+ * @Project :
+ * @Package Name : com.example.plusdemo.util
+ * @Description : 
+ * @Author : zhangbin
+ * @Create Date : 2019-11-07 14:06
  * @ModificationHistory Who   When     What
+ * ------------    --------------    ---------------------------------
  */
 @Component
 @Slf4j

@@ -15,11 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 /**
- * @Project : manager_backend
- * @Package Name : com.sunlands.feo.interceptor
- * @Description : Token拦截器
+ * @Project :
+ * @Package Name : com.example.plusdemo.interceptor
+ * @Description : 
  * @Author : zhangbin
- * @Create Date : 2019年03月17日 15:42
+ * @Create Date : 2019-11-07 14:06
  * @ModificationHistory Who   When     What
  * ------------    --------------    ---------------------------------
  */

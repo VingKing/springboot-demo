@@ -4,11 +4,11 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * @Project : lion_backend_api
- * @Package Name : com.sunlands.feo.exception
- * @Description :
- * @Author : pjz
- * @Create Date : 2019年03月19日 下午 03:14
+ * @Project :
+ * @Package Name : com.example.plusdemo.exception
+ * @Description : 
+ * @Author : zhangbin
+ * @Create Date : 2019-11-07 14:06
  * @ModificationHistory Who   When     What
  * ------------    --------------    ---------------------------------
  */

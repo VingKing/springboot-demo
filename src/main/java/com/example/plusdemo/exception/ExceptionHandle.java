@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @Project : lion_backend_api
- * @Package Name : com.sunlands.feo.interceptor
- * @Description :
- * @Author : pjz
- * @Create Date : 2019年03月19日 下午 03:22
+ * @Project :
+ * @Package Name : com.example.plusdemo.exception
+ * @Description : 
+ * @Author : zhangbin
+ * @Create Date : 2019-11-07 14:07
  * @ModificationHistory Who   When     What
  * ------------    --------------    ---------------------------------
  */

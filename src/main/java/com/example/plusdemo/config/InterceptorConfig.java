@@ -7,11 +7,13 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * @Package Name : com.sunlands.feo.config
- * @Description : 拦截器配置
- * @Author : ZhangBin
- * @Create Date : 2019/3/18
+ * @Project :
+ * @Package Name : com.example.plusdemo.config
+ * @Description : 
+ * @Author : zhangbin
+ * @Create Date : 2019-11-07 14:07
  * @ModificationHistory Who   When     What
+ * ------------    --------------    ---------------------------------
  */
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {

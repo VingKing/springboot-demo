@@ -15,11 +15,13 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * @Package Name : com.sunlands.feo.aop
- * @Description : Aop切面类,切向所有控制层,输出接收和响应信息
- * @Author : ZhangBin
- * @Create Date : 2018/11/1
+ * @Project :
+ * @Package Name : com.example.plusdemo.aop
+ * @Description : 
+ * @Author : zhangbin
+ * @Create Date : 2019-11-07 14:07
  * @ModificationHistory Who   When     What
+ * ------------    --------------    ---------------------------------
  */
 @Aspect
 @Component
