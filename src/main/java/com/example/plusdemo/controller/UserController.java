@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.plusdemo.entity.User;
+import com.example.plusdemo.event.SaveUserEvent;
 import com.example.plusdemo.service.IUserService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +32,9 @@ public class UserController extends BaseController {
 
     @Autowired
     private IUserService iUserService;
+
+    @Autowired
+    private RocketMQTemplate rocketMQTemplate;
 
     /**
      * 主键查询
@@ -74,6 +79,7 @@ public class UserController extends BaseController {
     @PostMapping("/save")
     public ResponseEntity saveUser(@RequestBody User user) {
         boolean save = iUserService.save(user);
+        rocketMQTemplate.convertAndSend("save_user",new SaveUserEvent(user.getId(),user.getName()));
         return ResponseEntity.ok(save);
     }
 

@@ -14,7 +14,7 @@ spring:
       slave0:
         driver-class-name: com.mysql.cj.jdbc.Driver
         type: com.zaxxer.hikari.HikariDataSource
-        jdbc-url: jdbc:mysql://localhost:32769/plus_demo
+        jdbc-url: jdbc:mysql://localhost:32768/plus_demo
         username: root
         password: mysql
     masterslave:
@@ -39,3 +39,8 @@ jwt:
   expiration: 60000
   issuer: JWT
   secret: 432d2eb**************20dba3633
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: my-group
