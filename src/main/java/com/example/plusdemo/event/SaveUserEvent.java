@@ -6,13 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.event
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:45
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Data
 @AllArgsConstructor

@@ -15,13 +15,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.aop
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:07
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Aspect
 @Component

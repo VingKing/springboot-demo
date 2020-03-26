@@ -15,13 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.interceptor
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:06
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Slf4j
 public class AuthenticationInterceptor implements HandlerInterceptor {

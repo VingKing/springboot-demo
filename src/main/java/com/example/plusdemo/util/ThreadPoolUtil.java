@@ -5,13 +5,7 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import java.util.concurrent.*;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.util
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:06
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 public class ThreadPoolUtil {
 

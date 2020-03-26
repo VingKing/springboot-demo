@@ -13,13 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.util
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:06
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Component
 @Slf4j

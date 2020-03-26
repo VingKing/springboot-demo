@@ -7,13 +7,7 @@ import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.consumer
- * @Description : mq消费者
- * @Author : zhangbin
- * @Create Date : 2019-11-07 14:52
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Slf4j
 @Component

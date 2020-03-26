@@ -19,12 +19,7 @@ import com.example.plusdemo.common.BaseController;
 import java.util.List;
 
 /**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author zhangbin
- * @since 2019-10-29
+ * @author VingKing
  */
 @RestController
 @RequestMapping("/user")
@@ -63,13 +58,13 @@ public class UserController extends BaseController {
      * 分页+动态条件查询
      */
     @GetMapping("/page")
-    public ResponseEntity getUserListPage(Page page, User user) {
+    public ResponseEntity getUserListPage(Page<User> page, User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(StringUtils.isNotBlank(user.getName()), "name", user.getName());
         queryWrapper.lt(user.getAge() != null, "age", user.getAge());
         // 排序
         queryWrapper.orderByAsc("age");
-        IPage result = iUserService.page(page, queryWrapper);
+        IPage<User> result = iUserService.page(page, queryWrapper);
         return ResponseEntity.ok(result);
     }
 

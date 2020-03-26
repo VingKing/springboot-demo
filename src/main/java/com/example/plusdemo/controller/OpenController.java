@@ -8,13 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.controller
- * @Description :
- * @Author : zhangbin
- * @Create Date : 2019-10-29 18:15
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @RestController
 @RequestMapping("/open")

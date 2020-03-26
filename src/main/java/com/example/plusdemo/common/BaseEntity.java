@@ -8,13 +8,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * @Project :
- * @Package Name : com.example.plusdemo.common
- * @Description : 
- * @Author : zhangbin
- * @Create Date : 2019-10-29 15:33
- * @ModificationHistory Who   When     What
- * ------------    --------------    ---------------------------------
+ * @author VingKing
  */
 @Data
 public class BaseEntity {
