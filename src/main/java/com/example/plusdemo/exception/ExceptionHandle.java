@@ -18,7 +18,7 @@ public class ExceptionHandle {
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
-    public ResponseEntity handle(HttpServletRequest httpServletRequest, Exception e) {
+    public ResponseEntity<HttpStatus> handle(HttpServletRequest httpServletRequest, Exception e) {
         if (e instanceof AuthenticationFailException) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(HttpStatus.FORBIDDEN);
         } else {

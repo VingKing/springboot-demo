@@ -21,7 +21,7 @@ public class OpenController {
      * @return
      */
     @GetMapping("/token")
-    public ResponseEntity getToken(String username) {
+    public ResponseEntity<String> getToken(String username) {
         String token = TokenUtil.generateToken(username);
         return ResponseEntity.ok(token);
     }

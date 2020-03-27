@@ -38,7 +38,7 @@ public class UserController extends BaseController {
      * @return
      */
     @GetMapping("/{id}")
-    public ResponseEntity getUserById(@PathVariable("id") Long id) {
+    public ResponseEntity<User> getUserById(@PathVariable("id") Long id) {
         User user = iUserService.getById(id);
         return ResponseEntity.ok(user);
     }
@@ -49,16 +49,17 @@ public class UserController extends BaseController {
      * @return
      */
     @GetMapping("/list")
-    public ResponseEntity getUserList() {
+    public ResponseEntity<List<User>> getUserList() {
         List<User> list = iUserService.list();
         return ResponseEntity.ok(list);
     }
 
     /**
      * 分页+动态条件查询
+     * @return
      */
     @GetMapping("/page")
-    public ResponseEntity getUserListPage(Page<User> page, User user) {
+    public ResponseEntity<IPage<User>> getUserListPage(Page<User> page, User user) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq(StringUtils.isNotBlank(user.getName()), "name", user.getName());
         queryWrapper.lt(user.getAge() != null, "age", user.getAge());
@@ -70,9 +71,10 @@ public class UserController extends BaseController {
 
     /**
      * 新增
+     * @return
      */
     @PostMapping("/save")
-    public ResponseEntity saveUser(@RequestBody User user) {
+    public ResponseEntity<Boolean> saveUser(@RequestBody User user) {
         boolean save = iUserService.save(user);
         rocketMQTemplate.convertAndSend("save_user",new SaveUserEvent(user.getId(),user.getName()));
         return ResponseEntity.ok(save);
@@ -80,9 +82,10 @@ public class UserController extends BaseController {
 
     /**
      * 主键更新
+     * @return
      */
     @PutMapping("/{id}/update")
-    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user) {
+    public ResponseEntity<Boolean> updateUser(@PathVariable Long id, @RequestBody User user) {
         user.setId(id);
         boolean save = iUserService.updateById(user);
         return ResponseEntity.ok(save);
@@ -90,9 +93,10 @@ public class UserController extends BaseController {
 
     /**
      * 条件更新
+     * @return
      */
     @PutMapping("/update")
-    public ResponseEntity updateUser(@RequestBody User user) {
+    public ResponseEntity<Boolean> updateUser(@RequestBody User user) {
         UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
         // 将年龄大于30的更新
         updateWrapper.gt("age", 30);
@@ -103,9 +107,10 @@ public class UserController extends BaseController {
 
     /**
      * 删除
+     * @return
      */
     @DeleteMapping("/{id}/delete")
-    public ResponseEntity delete(@PathVariable Long id) {
+    public ResponseEntity<Boolean> delete(@PathVariable Long id) {
         // 如果配置了逻辑删除，则默认执行update逻辑删除
         boolean b = iUserService.removeById(id);
         return ResponseEntity.ok(b);
